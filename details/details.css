@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+
+.main {
+    width: 80%;
+    background-color: #ffb5b5;
+    margin: 0 auto;
+    padding: 30px;
+
+}
+
+.nav {
+    padding-bottom: 30px;
+}
+
+
+h1 {
+
+    color: #ce2e6c;
+}
+
+a {
+    text-decoration: none;
+}
+
+#shopButton {
+
+    background-color: #504658;
+    border-radius: 7px;
+    color: #f0decb;
+    padding: 10px;
+    float: right;
+
+}
+
+.adaugaButton {
+    background-color: #f0decb;
+    padding: 10px;
+    border-radius: 7px;
+    color: #504658;
+    margin-top: 40px;
+}
+
+.column {
+    float: left;
+    width: 40%;
+    padding: 10px;
+    position: relative;
+
+
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: #ce2e6c 4px solid;
+    margin-bottom: 30px;
+}
+
+#title1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 30px;
+    margin: 5px;
+    font-size: 30px;
+    color: #ce2e6c;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid blue;
+    border-right: 16px solid green;
+    border-bottom: 16px solid red;
+    border-left: 16px solid pink;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    margin: 0 auto;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden {
+    display: none;
+    text-align: center;
+}
+
+.backgroundLoader {
+    position: fixed;
+    background-color: rgba(255, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}

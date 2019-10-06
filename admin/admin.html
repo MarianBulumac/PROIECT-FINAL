@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="admin.css" />
+    <script src="admin.js"></script>
+  </head>
+  <body onload="draw();">
+    <div class="backgroundLoader hidden">
+      <div class="loader"></div>
+    </div>
+    <div class="main">
+      <div class="home">
+        <a href="../home/index.html"> <h3>BACK HOME</h3></a>
+      </div>
+      <h1>ADMIN</h1>
+
+      <form id="addForm" onsubmit="addProdus(event);" action="">
+        <table>
+          <tr>
+            <td>
+              Nume:
+            </td>
+            <td>
+              <input type="text" name="nume" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Pret:
+            </td>
+            <td>
+              <input type="number" name="pret" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              URL::
+            </td>
+            <td>
+              <input type="text" name="imagine" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Stoc:
+            </td>
+            <td>
+              <input type="number" name="stoc" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Descriere:
+            </td>
+            <td>
+              <textarea type="text" name="descriere"></textarea>
+            </td>
+          </tr>
+        </table>
+
+        <div class="butonSubmit">
+          <button type="submit">ADAUGA</button>
+        </div>
+      </form>
+      <div class="afisareLista">
+        <table>
+          <thead>
+            <th>Product Name</th>
+            <th>Product stoc</th>
+            <th>Product Price</th>
+          </thead>
+          <tbody id="listaProduse"></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

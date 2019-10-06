@@ -1,0 +1,33 @@
+{
+    "produse": [{
+            "nume": "Barbie",
+            "pret": 70,
+            "imagine": "../pictures/Barbie.jpg",
+            "stoc": 5,
+            "descriere": "Recomandat 3+"
+        },
+        {
+            "nume": "Lego Cars",
+            "pret": 78,
+            "imagine": "../pictures/Lego.jpg",
+            "stoc": 10,
+            "descriere": "Recomandat 5+"
+        },
+        {
+            "nume": "My Little Pony",
+            "pret": 90,
+            "imagine": "../pictures/MyLittlePony.jpg",
+            "stoc": 9,
+            "descriere": "Recomandat 1+"
+        },
+        {
+            "nume": "Dinozaur",
+            "pret": 100,
+            "imagine": "../pictures/dinozaur.jpg",
+            "stoc": 7,
+            "descriere": "Recomandat 3+"
+        }
+    ],
+
+    "cos": []
+}
