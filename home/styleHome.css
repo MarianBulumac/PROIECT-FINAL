@@ -41,7 +41,7 @@
     font-weight: bold;
 }
 
-#topBar #shopButton {
+#topBar .shopButton {
     width: 200px;
     background-color: #504658;
     border: none;
@@ -60,7 +60,7 @@
     margin-right: 10px;
 }
 
-#topBar #adminButton {
+#topBar .adminButton {
     width: 120px;
     border-radius: 5px;
     border: solid lightgrey 1px;
@@ -102,7 +102,7 @@
     font-size: 20px;
 }
 
-.backgroundWeb #showProducts .product #bottomBox #detailsButoane {
+.backgroundWeb #showProducts .product #bottomBox .detailsButoane {
     height: 35px;
     width: 100px;
     margin-bottom: 5px;
@@ -180,4 +180,19 @@ a.carousel-control.left {
     text-align: center;
 
 
+}
+
+#topBar .shopButton:hover {
+    background-color: #0069d9;
+    color: white;
+}
+
+#topBar .adminButton:hover {
+    background-color: #138496;
+    color: white;
+}
+
+.backgroundWeb #showProducts .product #bottomBox .detailsButoane:hover {
+    background-color: #0069d9;
+    color: white;
 }

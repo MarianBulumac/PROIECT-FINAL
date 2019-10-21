@@ -24,7 +24,7 @@ a {
     text-decoration: none;
 }
 
-#shopButton {
+.shopButton {
 
     background-color: #504658;
     border-radius: 7px;
@@ -34,12 +34,23 @@ a {
 
 }
 
+.shopButton:hover {
+    background-color: #0069d9;
+    color: white;
+}
+
+
 .adaugaButton {
     background-color: #f0decb;
     padding: 10px;
     border-radius: 7px;
     color: #504658;
     margin-top: 40px;
+}
+
+.adaugaButton:hover {
+    background-color: #0069d9;
+    color: white;
 }
 
 .column {

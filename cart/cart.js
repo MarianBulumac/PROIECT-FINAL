@@ -15,8 +15,8 @@ async function draw() {
         str += ` 
                     <tr>
                    
-                        <th scope="row" name="nume"> <a href="../details/detalii.html?id=${i}">${list[i].nume} </a></th>
-                        <td name="imagine"><img style="width:100px; height=100px;" src="${list[i].imagine}" alt='' /></td>
+                        <th scope="row" name="nume"> <a href="../details/detalii.html?id=${i}">${list[i].nume}</a></th>
+                        <td name="imagine"><a href="../details/detalii.html?id=${i}"><img style="width:100px; height=100px;" src="${list[i].imagine}" alt='' /></a></td>
                         <td name="pret">${list[i].pret}</td>
                         <td name="cantitate">
                             <input type="button" value="-" class="minus" onclick="decrease(event,'${i}')">

@@ -26,7 +26,7 @@ async function draw() {
                             <span id="price">${list[i].pret}</span> 
                             <span>Lei</span>
                             <a href="../details/detalii.html?id=${i}">
-                                <button id="detailsButoane">Detalii</button>
+                                <button class="detailsButoane">Detalii</button>
                             </a>
                         </div>
                     </div>
