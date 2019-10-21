@@ -17,7 +17,7 @@ async function draw() {
                 <div class="col-lg-3 col-sm-6 col-xs-12 product">
                     <div class="boxBorder">
                         <div id="imgBox">
-                            <img class="imgProd" src="${list[i].imagine}" alt="${list[i].nume}">
+                        <a href="../details/detalii.html?id=${i}"><img class="imgProd" src="${list[i].imagine}" alt="${list[i].nume}"></a>
                         </div>
                         <div>
                             <p id="nameObj">${list[i].nume}</p>
