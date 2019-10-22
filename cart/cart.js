@@ -29,7 +29,7 @@ async function draw() {
                             <input type="button" value="-" class="minus" onclick="decrease(event,'${i}')">
                             <input type="number"  value="${
                               list[i].cantitate
-                            }" min="1" max="${
+                            }" min="0" max="${
       list[i].stoc
     }" class="numValue" onchange="schimbaCantitatea(this,event,'${i}')">  
                             <input type="button" value="+"  class="plus" onclick="increase(event,'${i}')"> 
@@ -51,8 +51,7 @@ async function decrease(event, i) {
   if (list[i].cantitate > 1) {
     document.querySelector(".backgroundLoader").classList.remove("hidden");
     var response = await fetch(
-      `https://proiect-final-marian.firebaseio.com/cos/${i}/cantitate.json`,
-      {
+      `https://proiect-final-marian.firebaseio.com/cos/${i}/cantitate.json`, {
         method: "put",
         body: parseInt(list[i].cantitate) - 1
       }
@@ -67,8 +66,7 @@ async function increase(event, i) {
   if (list[i].cantitate < list[i].stoc) {
     document.querySelector(".backgroundLoader").classList.remove("hidden");
     var response = await fetch(
-      `https://proiect-final-marian.firebaseio.com/cos/${i}/cantitate.json`,
-      {
+      `https://proiect-final-marian.firebaseio.com/cos/${i}/cantitate.json`, {
         method: "put",
         body: parseInt(list[i].cantitate) + 1
       }
@@ -83,8 +81,7 @@ async function sterge(event, i) {
   if (confirm("Esti sigur ca vrei sa stergi acest produs")) {
     document.querySelector(".backgroundLoader").classList.remove("hidden");
     var response = await fetch(
-      `https://proiect-final-marian.firebaseio.com/cos/${i}.json`,
-      {
+      `https://proiect-final-marian.firebaseio.com/cos/${i}.json`, {
         method: "delete"
       }
     );
@@ -97,20 +94,24 @@ async function sterge(event, i) {
 async function schimbaCantitatea(elem, event, i) {
   var input = elem.value;
 
-  if (list[i].cantitate > 0 || list[i].cantitate < list[i].stoc) {
+  if (input <= list[i].stoc && input > 0) {
+
     document.querySelector(".backgroundLoader").classList.remove("hidden");
     var response = await fetch(
-      `https://proiect-final-marian.firebaseio.com/cos/${i}/cantitate.json`,
-      {
+      `https://proiect-final-marian.firebaseio.com/cos/${i}/cantitate.json`, {
         method: "put",
         body: parseInt(input)
       }
     );
     document.querySelector(".backgroundLoader").classList.add("hidden");
-  } else {
-    alert("Alerta!");
+  } else if (input < 0) {
+    alert("Te rugam introdu un numar mai mare ca zero!")
+  } else if (input > list[i].stoc) {
+    alert("Cantitatea introdusa depaseste stocul existent!");
   }
 }
+
+
 
 //else if (list[i].cantitate <= list[i].stoc) {
 //   var response = await fetch(
