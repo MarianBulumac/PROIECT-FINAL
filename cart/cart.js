@@ -110,17 +110,3 @@ async function schimbaCantitatea(elem, event, i) {
     alert("Cantitatea introdusa depaseste stocul existent!");
   }
 }
-
-
-
-//else if (list[i].cantitate <= list[i].stoc) {
-//   var response = await fetch(
-//     `https://proiect-final-marian.firebaseio.com/cos/${i}/cantitate.json`,
-//     {
-//       method: "put",
-//       body: parseInt(input)
-//     }
-//   );
-
-//   input = 1;
-// }
