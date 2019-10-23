@@ -48,6 +48,10 @@ async function draw() {
   document.querySelector("#transport").innerHTML = transport * 5;
 }
 async function decrease(event, i) {
+  var response = await fetch(
+    `https://proiect-final-marian.firebaseio.com/cos/.json`
+  );
+  window.list = await response.json();
   if (list[i].cantitate > 1) {
     document.querySelector(".backgroundLoader").classList.remove("hidden");
     var response = await fetch(
@@ -63,6 +67,10 @@ async function decrease(event, i) {
   draw();
 }
 async function increase(event, i) {
+  var response = await fetch(
+    `https://proiect-final-marian.firebaseio.com/cos/.json`
+  );
+  window.list = await response.json();
   if (list[i].cantitate < list[i].stoc) {
     document.querySelector(".backgroundLoader").classList.remove("hidden");
     var response = await fetch(
@@ -92,8 +100,8 @@ async function sterge(event, i) {
 }
 
 async function schimbaCantitatea(elem, event, i) {
-  var input = elem.value;
 
+  var input = elem.value;
   if (input <= list[i].stoc && input > 0) {
 
     document.querySelector(".backgroundLoader").classList.remove("hidden");
@@ -104,7 +112,7 @@ async function schimbaCantitatea(elem, event, i) {
       }
     );
     document.querySelector(".backgroundLoader").classList.add("hidden");
-  } else if (input < 0) {
+  } else if (input <= 0) {
     alert("Te rugam introdu un numar mai mare ca zero!")
   } else if (input > list[i].stoc) {
     alert("Cantitatea introdusa depaseste stocul existent!");
