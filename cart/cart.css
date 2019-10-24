@@ -12,7 +12,7 @@ html {
 }
 
 
-#topBar {
+.topBar {
     margin-top: 10px;
     display: grid;
     grid-template-columns: 6.5fr 1fr 1fr;
@@ -20,7 +20,7 @@ html {
     margin-bottom: 20px;
 }
 
-#topBar #title1 {
+.topBar .title1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     height: 30px;
     margin: 5px;
@@ -28,7 +28,7 @@ html {
     color: #ce2e6c;
 }
 
-#topBar #shopButton {
+.topBar .shopButton {
     background-color: #504658;
     border-radius: 7px;
     color: #f0decb;

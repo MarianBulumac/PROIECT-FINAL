@@ -196,3 +196,9 @@ a.carousel-control.left {
     background-color: #0069d9;
     color: white;
 }
+
+.outOfStock {
+    background: white;
+    opacity: 0.5;
+
+}

@@ -13,10 +13,12 @@ async function draw() {
         if (list[i] === null) {
             continue;
         }
+
+
         str += `
                 <div class="col-lg-3 col-sm-6 col-xs-12 product">
                     <div class="boxBorder">
-                        <div id="imgBox">
+                        <div id="imgBox" class="verificaStoc">
                         <a href="../details/detalii.html?id=${i}"><img class="imgProd" src="${list[i].imagine}" alt="${list[i].nume}"></a>
                         </div>
                         <div>
@@ -34,4 +36,15 @@ async function draw() {
             `;
         document.querySelector("#showProducts").innerHTML = str;
     }
+    // if (list[i].stoc > 0) {
+    //     document.querySelector(".verificaStoc").classList.remove("outOfStock");
+
+
+    // } else if (list[i].stoc === 0) {
+    //     document.querySelector(".verificaStoc").classList.add("outOfStock");
+
+    // }
+    // if (list[i].stoc <= 0) {
+    //     document.getElementById("imgBox").style.opacity = "0.5";
+    // }
 }
