@@ -52,7 +52,6 @@ async function detalii() {
 
 async function addCos(event, i) {
     document.querySelector(".backgroundLoader").classList.remove("hidden");
-
     var response = await fetch(`https://proiect-final-marian.firebaseio.com/cos/${i}.json`);
     document.querySelector(".backgroundLoader").classList.add("hidden");
     produseCos = await response.json();
@@ -65,16 +64,11 @@ async function addCos(event, i) {
                 var response = await fetch(`https://proiect-final-marian.firebaseio.com/cos/${i}/cantitate.json`, {
                     method: "put",
                     body: produseCos.cantitate
-
-
                 });
             } else {
                 alert('Cantitatea selectata depaseste stocul existent!');
             }
-
         }
-
-
     } else if (parseInt(val) <= produse.stoc) {
         var obj = {
             imagine: produse.imagine,
@@ -83,17 +77,14 @@ async function addCos(event, i) {
             pret: produse.pret,
             stoc: produse.stoc,
             cantitate: document.querySelector("#cantitate").value
-
         }
         document.querySelector(".backgroundLoader").classList.remove("hidden");
         var response = await fetch(`https://proiect-final-marian.firebaseio.com/cos/${i}.json`, {
             method: "put",
             body: JSON.stringify(obj)
-
         });
         document.querySelector(".backgroundLoader").classList.add("hidden");
         alert("Produsul a fost adaugat in cos")
-
     } else {
         alert('Cantitatea selectata depaseste stocul existent!');
     }

@@ -28,14 +28,12 @@ async function draw() {
 
 async function addProdus(event) {
   event.preventDefault();
-
-  const numeProdus = document.querySelector("[name='nume']").value;
+ const numeProdus = document.querySelector("[name='nume']").value;
   const stocProdus = document.querySelector("[name='stoc']").value;
   const pretProdus = document.querySelector("[name='pret']").value;
   const descriereProdus = document.querySelector("[name='descriere']").value;
   const pozaProdus = document.querySelector("[name='imagine']").value;
-
-  if (numeProdus === "" || stocProdus === "" || pretProdus === "" || descriereProdus === "" || pozaProdus === "") {
+ if (numeProdus === "" || stocProdus === "" || pretProdus === "" || descriereProdus === "" || pozaProdus === "") {
     alert('Va rugam completati toate campurile!');
   } else {
     var obj = {
@@ -47,8 +45,7 @@ async function addProdus(event) {
     };
     document.querySelector(".backgroundLoader").classList.remove("hidden");
     var response = await fetch(
-
-      "https://proiect-final-marian.firebaseio.com/produse.json", {
+ "https://proiect-final-marian.firebaseio.com/produse.json", {
         method: "post",
         body: JSON.stringify(obj)
       });
@@ -57,7 +54,6 @@ async function addProdus(event) {
     document.querySelector("#addForm").reset();
   }
 }
-
 async function sterge(event, i) {
   event.preventDefault();
   if (confirm("Esti sigur ca vrei sa stergi produsul?")) {

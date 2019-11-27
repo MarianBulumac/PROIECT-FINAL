@@ -8,7 +8,7 @@
     <script>
           var list = [];
         async function editare(){
-            var i= window.location.search.substring(4);
+            var i=window.location.search.substring(4);
             event.preventDefault();
             document.querySelector(".backgroundLoader").classList.remove("hidden");
             var response = await fetch(`https://proiect-final-marian.firebaseio.com/produse.json`);
