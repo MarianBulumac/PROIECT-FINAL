@@ -62,6 +62,7 @@ async function quantityModifier(i, nr) {
     );
     document.querySelector(".backgroundLoader").classList.add("hidden");
   } else {
+    $("#myModal").modal(options);
     alert("Ai depasit stocul");
   }
   await draw();
